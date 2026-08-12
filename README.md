@@ -1,5 +1,11 @@
 <p align="center">
-  <sub>Atlas · mesh · maps</sub>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1200&color=C9D1D9&center=true&vCenter=true&width=520&height=40&lines=Atlas+%C2%B7+mesh+%C2%B7+maps" alt="Atlas · mesh · maps" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/stack-Go%20%7C%20TypeScript-1f6feb?style=flat-square" alt="Go | TypeScript" />
+  <img src="https://img.shields.io/badge/focus-C2%20%2F%20mesh%20%2F%20maps-238636?style=flat-square" alt="C2 / mesh / maps" />
+  <img src="https://img.shields.io/badge/profile-auto--refreshed-6e7681?style=flat-square" alt="auto-refreshed" />
 </p>
 
 ---
@@ -18,31 +24,70 @@
 
 ### About
 
-I work on systems where the map, the radio, and the backend have to agree.
-
-That usually means Go and TypeScript services, map consoles, mesh transports, and the smaller libraries that keep those pieces interoperable. I care about things you can run locally, measure, and replay.
+I work on systems where the map, the radio, and the backend have to agree — Go/TypeScript services, map consoles, mesh transports, and the small libraries that keep those pieces interoperable. Prefer things you can run locally, measure, and replay.
 
 ---
 
 ### Atlas
 
-Atlas is the main effort — a command-and-control style stack split across two repos right now.
+Main effort. Two repos: the application rewrite, and the radio/mesh lab underneath it.
+
+```mermaid
+flowchart TB
+  subgraph UI["Command surface"]
+    CI["Command interface<br/>map console · Cloudflare / Vite"]
+    SIM["Simulations<br/>local scenario workbench"]
+  end
+
+  subgraph APP["Application stack — Atlas-Modernization"]
+    SDK["SDK + asset runtime<br/>typed client · sync · telemetry"]
+    PROTO["Protocol<br/>schemas · contracts · validators"]
+    CORE["Core<br/>Go API · storage · object store"]
+  end
+
+  subgraph MESH["Transport lab — Atlas-Mesh"]
+    WEB["Replay viewer"]
+    MSIM["Deterministic simulation"]
+    MP["MeshProtocol"]
+    RAD["Radio"]
+  end
+
+  CI --> SDK
+  SIM --> SDK
+  SDK --> PROTO
+  PROTO --> CORE
+  CORE -. uses .-> MESH
+  WEB --> MSIM
+  MSIM --> MP
+  MP --> RAD
+```
 
 #### Modernization
-[`Atlas-Modernization`](https://github.com/the-Drunken-coder/Atlas-Modernization) holds the application rewrite as one workspace:
 
-- **Core** — Go HTTP API, durable storage, object store
-- **Protocol** — schemas, generated contracts, validators
-- **SDK & asset runtime** — typed client, sync, telemetry/command path
-- **Command interface** — Cloudflare Pages / Vite map console
-- **Simulations** — local scenario workbench with a browser UI
+[`Atlas-Modernization`](https://github.com/the-Drunken-coder/Atlas-Modernization) — one workspace for the rewrite:
 
-Recent focus: feed recovery barriers, catalog/ETag behavior, SDK cursor rehydration, and tightening the simulation event stream.
+| Layer | Role |
+|:--|:--|
+| **Core** | Go HTTP API, durable storage, object store |
+| **Protocol** | Schemas, generated contracts, validators |
+| **SDK & asset runtime** | Typed client, sync, telemetry / command path |
+| **Command interface** | Map console on Cloudflare Pages / Vite |
+| **Simulations** | Local scenario workbench + browser UI |
+
+Recent focus: feed recovery barriers, catalog/ETag behavior, SDK cursor rehydration, simulation event-stream cleanup.
 
 #### Mesh
-[`Atlas-Mesh`](https://github.com/the-Drunken-coder/Atlas-Mesh) asks a narrower question: *how should bytes move between radios on an unreliable network?*
 
-Architecture is intentionally thin — `Radio` → `MeshProtocol` → `Simulation` → a small web replay viewer — so hardware radios and experiments stay interchangeable. The lab ships direct acknowledgement strategies (ack, stop-and-wait, …) alongside routing experiments (gateway-tree, controlled flooding, on-demand, quality-tree). The simulator is seeded and deterministic, including a measured Heltec V3 LoRa airtime model.
+[`Atlas-Mesh`](https://github.com/the-Drunken-coder/Atlas-Mesh) — narrower question: *how should bytes move between radios on an unreliable network?*
+
+```mermaid
+flowchart LR
+  R["Radio"] --> P["MeshProtocol"]
+  P --> S["Simulation"]
+  S --> W["Web replay"]
+```
+
+Direct strategies (ack, stop-and-wait, …) sit beside routing experiments (gateway-tree, controlled flooding, on-demand, quality-tree). Simulator is seeded and deterministic, including a measured Heltec V3 LoRa airtime model.
 
 Latest: consolidated radio verification lab.
 
