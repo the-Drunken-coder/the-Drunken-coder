@@ -2,12 +2,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1200&color=C9D1D9&center=true&vCenter=true&width=520&height=40&lines=Atlas+%C2%B7+mesh+%C2%B7+maps" alt="Atlas · mesh · maps" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/stack-Go%20%7C%20TypeScript-1f6feb?style=flat-square" alt="Go | TypeScript" />
-  <img src="https://img.shields.io/badge/focus-C2%20%2F%20mesh%20%2F%20maps-238636?style=flat-square" alt="C2 / mesh / maps" />
-  <img src="https://img.shields.io/badge/profile-auto--refreshed-6e7681?style=flat-square" alt="auto-refreshed" />
-</p>
-
 ---
 
 ### Lately
@@ -80,14 +74,7 @@ Recent focus: feed recovery barriers, catalog/ETag behavior, SDK cursor rehydrat
 
 [`Atlas-Mesh`](https://github.com/the-Drunken-coder/Atlas-Mesh) — narrower question: *how should bytes move between radios on an unreliable network?*
 
-```mermaid
-flowchart LR
-  R["Radio"] --> P["MeshProtocol"]
-  P --> S["Simulation"]
-  S --> W["Web replay"]
-```
-
-Direct strategies (ack, stop-and-wait, …) sit beside routing experiments (gateway-tree, controlled flooding, on-demand, quality-tree). Simulator is seeded and deterministic, including a measured Heltec V3 LoRa airtime model.
+Architecture is intentionally thin: `Radio` → `MeshProtocol` → `Simulation` → web replay viewer. Direct strategies (ack, stop-and-wait, …) sit beside routing experiments (gateway-tree, controlled flooding, on-demand, quality-tree). Simulator is seeded and deterministic, including a measured Heltec V3 LoRa airtime model.
 
 Latest: consolidated radio verification lab.
 
