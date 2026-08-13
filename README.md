@@ -13,6 +13,7 @@
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET provisioning and operator tooling |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Bridge between Meshtastic radios and IP networks |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library (file-pr, babysit-pr, ask-opus) |
 
 ---
 
@@ -80,4 +81,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 12 Aug 2026</sub>
+<sub>Updated 13 Aug 2026</sub>
