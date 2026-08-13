@@ -13,7 +13,7 @@
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET provisioning and operator tooling |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Bridge between Meshtastic radios and IP networks |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library (file-pr, babysit-pr, ask-opus) |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex skills library — maintainer skills plus Thermos ports from Cursor |
 
 ---
 
@@ -69,7 +69,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: feed recovery barriers, catalog/ETag behavior, SDK cursor rehydration, simulation event-stream cleanup.
+Recent focus: consolidating wire contracts under Atlas Protocol (Core, SDK, command UI, simulations, asset runtime), plus earlier recovery/ETag and SDK cursor work.
 
 #### Mesh
 
