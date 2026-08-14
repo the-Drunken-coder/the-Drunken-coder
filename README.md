@@ -13,7 +13,7 @@
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET provisioning and operator tooling |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Bridge between Meshtastic radios and IP networks |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex skills library — maintainer skills plus Thermos ports from Cursor |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Agent Skills library (Plugins 1.0) — pstack, anti-ui-slop, Thermos ports |
 
 ---
 
@@ -69,7 +69,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: consolidating wire contracts under Atlas Protocol (Core, SDK, command UI, simulations, asset runtime), plus earlier recovery/ETag and SDK cursor work.
+Recent focus: consolidating wire contracts under Atlas Protocol, then closing a safety and type-boundary audit (credential fallbacks, storage isolation, SDK/command-interface types).
 
 #### Mesh
 
@@ -81,4 +81,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 13 Aug 2026</sub>
+<sub>Updated 14 Aug 2026</sub>
