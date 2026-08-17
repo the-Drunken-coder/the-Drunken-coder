@@ -10,10 +10,10 @@
 |:--|:--|
 | [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | Atlas app stack rewrite — core, protocol, SDK, command UI, simulations |
 | [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
-| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET provisioning and operator tooling |
+| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET tooling — recent safety/contract audit (flash, provision, artifacts) |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Bridge between Meshtastic radios and IP networks |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Agent Skills library (Plugins 1.0) — pstack, anti-ui-slop, Thermos ports |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Agent Skills library — pstack, grill-with-docs, codebase-architecture, Thermos |
 
 ---
 
@@ -69,7 +69,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: consolidating wire contracts under Atlas Protocol, then closing a safety and type-boundary audit (credential fallbacks, storage isolation, SDK/command-interface types).
+Recent focus: Protocol wire-contract consolidation, a safety/type-boundary audit, then verified correctness gaps (object usage hints, `changedSince` validation, credential reuse, production reset guards).
 
 #### Mesh
 
@@ -81,4 +81,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 14 Aug 2026</sub>
+<sub>Updated 17 Aug 2026</sub>
