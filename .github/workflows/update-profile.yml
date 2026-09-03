@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      REPORT_PATH: ${{ runner.temp }}/unclassified-projects.md
+      REPORT_PATH: /tmp/unclassified-projects.md
     steps:
       - uses: actions/checkout@v4
 
