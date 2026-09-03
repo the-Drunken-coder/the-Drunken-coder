@@ -8,7 +8,7 @@
 
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | Atlas app stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
+| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | Atlas app stack rewrite — core, protocol, SDK, plugins, command UI, simulations; Atlas Link / Meshtastic in progress |
 | [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET tooling — recent safety/contract audit (flash, provision, artifacts) |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
@@ -71,7 +71,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI with status/update/reset and failure-safe lifecycle changes, dockable map windows in the command interface, and Core releases through v0.1.7.
+Recent focus: plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI with status/update/reset and failure-safe lifecycle changes, dockable map windows in the command interface, Core releases through v0.1.7, and Atlas Link (Meshtastic) — architecture and link-system implementation in progress, with Core hardening around plugin endpoint origins, gateway admission timeouts, and interrupted plugin-disable recovery.
 
 #### Mesh
 
@@ -83,4 +83,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 2 Sep 2026</sub>
+<sub>Updated 3 Sep 2026</sub>
