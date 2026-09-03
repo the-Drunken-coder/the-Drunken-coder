@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "owner": "the-Drunken-coder",
+  "lately": {
+    "limit": 6,
+    "maxPerGroup": 2,
+    "activeWithinDays": 90
+  },
+  "projects": [
+    {
+      "id": "atlas-core",
+      "name": "Atlas / Core",
+      "group": "atlas",
+      "summary": "Go API, durable storage, plugins, and task execution",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/services/core",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["services/core"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-command-interface",
+      "name": "Atlas / Command interface",
+      "group": "atlas",
+      "summary": "Map console and dockable operator workspace",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/surfaces/command-interface",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["surfaces/command-interface"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-core-cli",
+      "name": "Atlas / Core CLI",
+      "group": "atlas",
+      "summary": "Local lifecycle and update tooling for Atlas Core",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/surfaces/core-cli",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["surfaces/core-cli"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-protocol-sdk",
+      "name": "Atlas / Protocol and SDK",
+      "group": "atlas",
+      "summary": "Shared contracts, validators, typed clients, and asset runtime",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/packages",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["packages/protocol", "packages/sdk"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-plugins",
+      "name": "Atlas / Plugin platform",
+      "group": "atlas",
+      "summary": "Plugin authoring runtime, catalog, and first-party plugins",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/plugins",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["packages/plugin-runtime", "plugins"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-fieldlink",
+      "name": "Atlas / FieldLink",
+      "group": "atlas",
+      "summary": "Constrained MeshCore transport for Atlas commands and reports",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/packages/fieldlink",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["packages/fieldlink"]
+        }
+      ]
+    },
+    {
+      "id": "atlas-simulations",
+      "name": "Atlas / Simulations",
+      "group": "atlas",
+      "summary": "Local scenario workbench and browser simulation UI",
+      "url": "https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/simulations",
+      "sources": [
+        {
+          "repository": "Atlas-Modernization",
+          "paths": ["simulations"]
+        }
+      ]
+    },
+    {
+      "id": "cvbench-benchmark",
+      "name": "CVBench / Benchmark",
+      "group": "cvbench",
+      "summary": "Benchmark runner, scorer, reports, and public control plane",
+      "url": "https://github.com/the-Drunken-coder/cvbench-benchmark",
+      "sources": [
+        {
+          "repository": "cvbench-benchmark"
+        }
+      ]
+    },
+    {
+      "id": "cvbench-dataset",
+      "name": "CVBench / Dataset",
+      "group": "cvbench",
+      "summary": "Canonical datasets, annotations, provenance, and releases",
+      "url": "https://github.com/the-Drunken-coder/cvbench-dataset",
+      "sources": [
+        {
+          "repository": "cvbench-dataset"
+        }
+      ]
+    },
+    {
+      "id": "cvbench-studio",
+      "name": "CVBench / Studio",
+      "group": "cvbench",
+      "summary": "Local dataset authoring, annotation, and review application",
+      "url": "https://github.com/the-Drunken-coder/cvbench-studio",
+      "sources": [
+        {
+          "repository": "cvbench-studio"
+        }
+      ]
+    },
+    {
+      "id": "easymanet-cli",
+      "name": "EasyMANET / CLI",
+      "group": "easymanet",
+      "summary": "MANET provisioning, flashing, diagnostics, and automation",
+      "url": "https://github.com/the-Drunken-coder/easymanet/tree/main/apps/cli",
+      "sources": [
+        {
+          "repository": "easymanet",
+          "paths": ["apps/cli"]
+        },
+        {
+          "repository": "easymanet-cli"
+        }
+      ]
+    },
+    {
+      "id": "easymanet-desktop",
+      "name": "EasyMANET / Desktop",
+      "group": "easymanet",
+      "summary": "Local operator console for provisioning and device workflows",
+      "url": "https://github.com/the-Drunken-coder/easymanet/tree/main/apps/desktop",
+      "sources": [
+        {
+          "repository": "easymanet",
+          "paths": ["apps/desktop"]
+        },
+        {
+          "repository": "easymanet-desktop"
+        }
+      ]
+    },
+    {
+      "id": "easymanet-images",
+      "name": "EasyMANET / Image builder",
+      "group": "easymanet",
+      "summary": "Reproducible OpenMANET image builds and release artifacts",
+      "url": "https://github.com/the-Drunken-coder/easymanet/tree/main/packages/image",
+      "sources": [
+        {
+          "repository": "easymanet",
+          "paths": ["packages/image"]
+        },
+        {
+          "repository": "easymanet-images"
+        }
+      ]
+    },
+    {
+      "id": "meshtastic-lab",
+      "name": "Meshtastic Lab",
+      "group": "meshtastic-lab",
+      "summary": "Firmware-in-the-loop Meshtastic network simulator",
+      "url": "https://github.com/the-Drunken-coder/meshtastic-lab",
+      "sources": [
+        {
+          "repository": "meshtastic-lab"
+        }
+      ]
+    },
+    {
+      "id": "dcs",
+      "name": "DCS",
+      "group": "dcs",
+      "summary": "Personal Codex plugin and focused agent skills library",
+      "url": "https://github.com/the-Drunken-coder/DCS",
+      "sources": [
+        {
+          "repository": "DCS"
+        }
+      ]
+    },
+    {
+      "id": "meshtastic-wifi-bridge",
+      "name": "Meshtastic WiFi Bridge",
+      "group": "meshtastic-wifi-bridge",
+      "summary": "Transport and browser bridge between Meshtastic radios and IP networks",
+      "url": "https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge",
+      "sources": [
+        {
+          "repository": "Meshtastic-WIFI-bridge"
+        }
+      ]
+    },
+    {
+      "id": "tactical-mesh-radio",
+      "name": "Tactical Mesh Radio",
+      "group": "tactical-mesh-radio",
+      "summary": "Simulator-first tactical LoRa mesh stack with a Rust core",
+      "url": "https://github.com/the-Drunken-coder/tactical-mesh-radio",
+      "sources": [
+        {
+          "repository": "tactical-mesh-radio"
+        }
+      ]
+    },
+    {
+      "id": "sidc-kit",
+      "name": "SIDC Kit",
+      "group": "sidc-kit",
+      "summary": "Compact TypeScript toolkit for Symbol Identification Codes",
+      "url": "https://github.com/the-Drunken-coder/sidc-kit",
+      "sources": [
+        {
+          "repository": "sidc-kit"
+        }
+      ]
+    },
+    {
+      "id": "autobex-2",
+      "name": "Autobex 2",
+      "group": "autobex-2",
+      "summary": "Cloudflare map application with multiple OSM search modes",
+      "url": "https://github.com/the-Drunken-coder/Autobex-2",
+      "sources": [
+        {
+          "repository": "Autobex-2"
+        }
+      ]
+    }
+  ],
+  "moduleRoots": [
+    {
+      "repository": "Atlas-Modernization",
+      "roots": ["services", "surfaces", "packages"],
+      "ignoredPaths": []
+    },
+    {
+      "repository": "easymanet",
+      "roots": ["apps", "packages"],
+      "ignoredPaths": ["packages/core"]
+    }
+  ],
+  "ignoredRepositories": [
+    "ATLAS-OS",
+    "ATLAS2",
+    "Atlas-FieldLink",
+    "DK2-mod-tools",
+    "Meshtastic-pinger",
+    "SAGA",
+    "TileMux",
+    "USB-Boot-Enabler",
+    "atlas-api-helper-npm",
+    "atlas-asset-client-pypi",
+    "atlas-c3",
+    "atlas-fusion-harness",
+    "atlas-meshtastic-bridge-pypi",
+    "atlas-meshtastic-link-pypi",
+    "fpvdroneai",
+    "meshtastic.deadlight",
+    "osm-standard-dark",
+    "rl-drone-hoops",
+    "skills",
+    "the-Drunken-coder",
+    "wepl-report-viewer"
+  ]
+}

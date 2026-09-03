@@ -1,0 +1,83 @@
+name: Update profile projects
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 12 * * *"
+  push:
+    branches: [main]
+    paths:
+      - portfolio.json
+      - scripts/update_profile.py
+      - tests/test_update_profile.py
+      - .github/workflows/update-profile.yml
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-profile-projects
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPORT_PATH: ${{ runner.temp }}/unclassified-projects.md
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test updater
+        run: python3 -m unittest discover -s tests
+
+      - name: Refresh current projects
+        run: python3 scripts/update_profile.py --write --unclassified-output "$REPORT_PATH"
+
+      - name: Check generated files
+        run: git diff --check
+
+      - name: Commit profile changes
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore(profile): refresh current projects"
+          git push
+
+      - name: Find existing classification issue
+        id: issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          number="$(gh issue list --state open --limit 100 --json number,title --jq 'map(select(.title == "Classify newly discovered portfolio projects")) | .[0].number // ""')"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          if [[ -s "$REPORT_PATH" ]]; then
+            echo "has_report=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_report=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create classification issue
+        if: steps.issue.outputs.number == '' && steps.issue.outputs.has_report == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue create --title "Classify newly discovered portfolio projects" --body-file "$REPORT_PATH"
+
+      - name: Update classification issue
+        if: steps.issue.outputs.number != '' && steps.issue.outputs.has_report == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+        run: gh issue edit "$ISSUE_NUMBER" --body-file "$REPORT_PATH"
+
+      - name: Close resolved classification issue
+        if: steps.issue.outputs.number != '' && steps.issue.outputs.has_report == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+        run: gh issue close "$ISSUE_NUMBER" --comment "All discovered public repositories and watched modules are classified."

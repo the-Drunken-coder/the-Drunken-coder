@@ -6,14 +6,16 @@
 
 ### Lately
 
+<!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | Atlas app stack rewrite — core, protocol, SDK, plugins, command UI, simulations; Atlas Link / Meshtastic in progress |
-| [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
-| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | MANET / OpenMANET tooling — recent safety/contract audit (flash, provision, artifacts) |
-| [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
-| [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Bridge between Meshtastic radios and IP networks |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Agent Skills library — review/wait skills, architecture-map, pstack, Thermos (0.13.0) |
+| [**Meshtastic Lab**](https://github.com/the-Drunken-coder/meshtastic-lab) | Firmware-in-the-loop Meshtastic network simulator |
+| [**Atlas / Core**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/services/core) | Go API, durable storage, plugins, and task execution |
+| [**Atlas / Core CLI**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/surfaces/core-cli) | Local lifecycle and update tooling for Atlas Core |
+| [**CVBench / Benchmark**](https://github.com/the-Drunken-coder/cvbench-benchmark) | Benchmark runner, scorer, reports, and public control plane |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex plugin and focused agent skills library |
+| [**CVBench / Dataset**](https://github.com/the-Drunken-coder/cvbench-dataset) | Canonical datasets, annotations, provenance, and releases |
+<!-- profile:lately:end -->
 
 ---
 
