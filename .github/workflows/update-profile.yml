@@ -27,7 +27,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       REPORT_PATH: /tmp/unclassified-projects.md
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Test updater
         run: python3 -m unittest discover -s tests
