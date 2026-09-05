@@ -9,12 +9,12 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | Atlas app stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
-| [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
-| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
-| [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
-| [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Chunked, reliable Meshtastic transport with browser-over-mesh UI |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex skills library — review/wait skills, architecture-map, Thermos (0.13.0) |
+| [**Atlas / Command interface**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/surfaces/command-interface) | Map console and dockable operator workspace |
+| [**Atlas / Core**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/services/core) | Go API, durable storage, plugins, and task execution |
+| [**Meshtastic Lab**](https://github.com/the-Drunken-coder/meshtastic-lab) | Firmware-in-the-loop Meshtastic network simulator |
+| [**CVBench / Benchmark**](https://github.com/the-Drunken-coder/cvbench-benchmark) | Benchmark runner, scorer, reports, and public control plane |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex plugin and focused agent skills library |
+| [**CVBench / Dataset**](https://github.com/the-Drunken-coder/cvbench-dataset) | Canonical datasets, annotations, provenance, and releases |
 <!-- profile:lately:end -->
 
 ---
@@ -85,4 +85,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 4 Sep 2026</sub>
+<sub>Updated 5 Sep 2026</sub>
