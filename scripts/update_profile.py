@@ -38,6 +38,7 @@ class Project:
     summary: str
     url: str
     sources: tuple[Source, ...]
+    always_include: bool = False
 
 
 @dataclass(frozen=True)
@@ -125,10 +126,16 @@ class GitHubClient:
             parameters: dict[str, str | int] = {"per_page": 1}
             if path is not None:
                 parameters["path"] = path
-            commits = self._get(
-                f"/repos/{owner}/{source.repository}/commits",
-                parameters,
-            )
+            try:
+                commits = self._get(
+                    f"/repos/{owner}/{source.repository}/commits",
+                    parameters,
+                )
+            except RuntimeError as error:
+                # Private or inaccessible repos are outside the public workflow token.
+                if "GitHub returned 404" in str(error):
+                    return None
+                raise
             if not commits:
                 continue
             commit = commits[0]["commit"]
@@ -226,6 +233,10 @@ def load_config(path: Path) -> Config:
         if not sources:
             raise ConfigError(f"projects[{index}].sources must not be empty")
 
+        always_include = item.get("alwaysInclude", False)
+        if not isinstance(always_include, bool):
+            raise ConfigError(f"projects[{index}].alwaysInclude must be a boolean")
+
         projects.append(
             Project(
                 id=project_id,
@@ -236,6 +247,7 @@ def load_config(path: Path) -> Config:
                 ),
                 url=_require_string(item.get("url"), f"projects[{index}].url"),
                 sources=tuple(sources),
+                always_include=always_include,
             )
         )
 
@@ -319,15 +331,35 @@ def select_lately(
         key=lambda item: (-item.occurred_at.timestamp(), item.project.id),
     )
     selected: list[Activity] = []
+    selected_ids: set[str] = set()
     group_counts: dict[str, int] = {}
     for item in ranked:
         count = group_counts.get(item.project.group, 0)
         if count >= config.max_per_group:
             continue
         selected.append(item)
+        selected_ids.add(item.project.id)
         group_counts[item.project.group] = count + 1
         if len(selected) == config.limit:
             break
+
+    if len(selected) < config.limit:
+        activity_by_id = {item.project.id: item for item in activity}
+        for project in config.projects:
+            if len(selected) == config.limit:
+                break
+            if not project.always_include or project.id in selected_ids:
+                continue
+            count = group_counts.get(project.group, 0)
+            if count >= config.max_per_group:
+                continue
+            item = activity_by_id.get(project.id)
+            if item is None:
+                item = Activity(project=project, occurred_at=cutoff)
+            selected.append(item)
+            selected_ids.add(project.id)
+            group_counts[project.group] = count + 1
+
     return tuple(selected)
 
 

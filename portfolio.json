@@ -29,7 +29,8 @@
         {
           "repository": "Atlas-Mesh"
         }
-      ]
+      ],
+      "alwaysInclude": true
     },
     {
       "id": "easymanet",

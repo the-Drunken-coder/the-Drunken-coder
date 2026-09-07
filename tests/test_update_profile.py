@@ -130,3 +130,36 @@ def date(year: int, month: int, day: int) -> datetime:
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_always_include_fills_remaining_slots(self):
+        pinned = update_profile.Project(
+            id="pinned",
+            name="pinned",
+            group="pinned",
+            summary="Pinned private project",
+            url="https://example.com/pinned",
+            sources=(update_profile.Source(repository="pinned", paths=()),),
+            always_include=True,
+        )
+        config = update_profile.Config(
+            owner="owner",
+            limit=3,
+            max_per_group=1,
+            active_within_days=90,
+            projects=(pinned,),
+            module_roots=(),
+            ignored_repositories=frozenset(),
+        )
+        activity = (
+            update_profile.Activity(project("a", "a"), date(2026, 9, 3)),
+            update_profile.Activity(project("b", "b"), date(2026, 9, 2)),
+        )
+
+        selected = update_profile.select_lately(config, activity, date(2026, 9, 3))
+
+        self.assertEqual(
+            [item.project.id for item in selected],
+            ["a", "b", "pinned"],
+        )
+
+
