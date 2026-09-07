@@ -123,14 +123,6 @@ class ProfileUpdaterTests(unittest.TestCase):
 
         self.assertIn("one\\|two", result)
 
-
-def date(year: int, month: int, day: int) -> datetime:
-    return datetime(year, month, day, tzinfo=timezone.utc)
-
-
-if __name__ == "__main__":
-    unittest.main()
-
     def test_always_include_fills_remaining_slots(self):
         pinned = update_profile.Project(
             id="pinned",
@@ -162,4 +154,11 @@ if __name__ == "__main__":
             ["a", "b", "pinned"],
         )
 
+
+def date(year: int, month: int, day: int) -> datetime:
+    return datetime(year, month, day, tzinfo=timezone.utc)
+
+
+if __name__ == "__main__":
+    unittest.main()
 
