@@ -9,12 +9,12 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas / Command interface**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/surfaces/command-interface) | Map console and dockable operator workspace |
-| [**Atlas / Core**](https://github.com/the-Drunken-coder/Atlas-Modernization/tree/main/services/core) | Go API, durable storage, plugins, and task execution |
-| [**Meshtastic Lab**](https://github.com/the-Drunken-coder/meshtastic-lab) | Firmware-in-the-loop Meshtastic network simulator |
-| [**CVBench / Benchmark**](https://github.com/the-Drunken-coder/cvbench-benchmark) | Benchmark runner, scorer, reports, and public control plane |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Personal Codex plugin and focused agent skills library |
-| [**CVBench / Dataset**](https://github.com/the-Drunken-coder/cvbench-dataset) | Canonical datasets, annotations, provenance, and releases |
+| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — review skills, architecture-map (0.13.0) |
+| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
+| [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
+| [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
+| [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Chunked, reliable Meshtastic transport with browser-over-mesh UI |
 <!-- profile:lately:end -->
 
 ---
@@ -73,7 +73,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI (Plugins preview, status/update/reset, failure-safe lifecycle), command-interface provenance in collapsed results and dockable map windows, Core releases through v0.1.7, and Atlas Link (Meshtastic) implementation in progress. Hardening continues around plugin endpoint origins, gateway admission timeouts, interrupted plugin-disable recovery, and classifying plugin-runtime handler exceptions as failures.
+Recent focus: plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI (Plugins preview, status/update/reset, failure-safe lifecycle), command-interface sidebar geo feature authoring (points, lines, polygons, circles), provenance in collapsed results and dockable map windows, edit/retry preservation across telemetry and manifest revalidation, Core releases through v0.1.7, and Atlas Link (Meshtastic) implementation in progress. Hardening continues around plugin endpoint origins, gateway admission timeouts, interrupted plugin-disable recovery, plugin-runtime handler failures, and command-interface runtime recovery paths.
 
 #### Mesh
 
