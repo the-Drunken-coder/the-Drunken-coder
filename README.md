@@ -9,7 +9,7 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
+| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, Link, simulations |
 | [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — review skills, architecture-map (0.13.0) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
@@ -68,12 +68,13 @@ flowchart TB
 | **Core** | Go HTTP API, durable storage, object store |
 | **Protocol** | Schemas, generated contracts, validators |
 | **SDK & asset runtime** | Typed client, sync, telemetry / command path |
+| **Atlas Link** | Meshtastic Link service/SDK — Shared Picture, Tasks, radio transport |
 | **Plugins** | Authoring runtime, first-party catalog, catalog releases |
 | **Core CLI** | Ink TUI for single-host `atlas-core` lifecycle ops |
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI (Plugins preview, status/update/reset, failure-safe lifecycle), command-interface sidebar geo feature authoring (points, lines, polygons, circles), provenance in collapsed results and dockable map windows, edit/retry preservation across telemetry and manifest revalidation, Core releases through v0.1.7, and Atlas Link (Meshtastic) implementation in progress. Hardening continues around plugin endpoint origins, gateway admission timeouts, interrupted plugin-disable recovery, plugin-runtime handler failures, and command-interface runtime recovery paths.
+Recent focus: Atlas Link (Meshtastic) consolidated into one Link workspace — Shared Picture, ordered Task delivery, payload budgeting, serial framing, compression, paired receipts, and transport fixes; command-interface sidebar geo feature authoring (points, lines, polygons, circles), provenance in collapsed results and dockable map windows, and edit/retry preservation across telemetry and manifest revalidation; plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI, and Core releases through v0.1.7. Hardening continues around geofeature and task-projection stability across heartbeat/clock ticks, Core JSON serialization and unknown-settings rejection, plugin endpoint origins, gateway admission timeouts, and command-interface runtime recovery paths.
 
 #### Mesh
 
