@@ -74,7 +74,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: Atlas Link (Meshtastic) consolidated into one Link workspace — Shared Picture, ordered Task delivery, payload budgeting, serial framing, compression, paired receipts, and transport fixes; command-interface sidebar geo feature authoring (points, lines, polygons, circles), provenance in collapsed results and dockable map windows, and edit/retry preservation across telemetry and manifest revalidation; plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI, and Core releases through v0.1.7. Hardening continues around geofeature and task-projection stability across heartbeat/clock ticks, Core JSON serialization and unknown-settings rejection, plugin endpoint origins, gateway admission timeouts, and command-interface runtime recovery paths.
+Recent focus: Atlas Link (Meshtastic) consolidated into one Link workspace — Shared Picture, ordered Task delivery, payload budgeting, serial framing, compression, paired receipts, and transport fixes; command-interface sidebar geo feature authoring (points, lines, polygons, circles), provenance in collapsed results and dockable map windows, and edit/retry preservation across telemetry and manifest revalidation; plugin platform v1 (catalog, building scan, independent release path), `atlas-core` CLI Ink TUI with safer interrupted lifecycle recovery, and Core releases through v0.1.8 (engine-scoped Docker resources; older deployments need a clean reinstall). Hardening continues around geofeature and task-projection stability across heartbeat/clock ticks, Core JSON serialization and unknown-settings rejection, plugin endpoint origins, gateway admission timeouts, and command-interface runtime recovery paths.
 
 #### Mesh
 
@@ -86,4 +86,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 8 Sep 2026</sub>
+<sub>Updated 9 Sep 2026</sub>
