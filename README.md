@@ -10,7 +10,7 @@
 | Project | Notes |
 |:--|:--|
 | [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — review skills, architecture-map (0.13.0) |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review skills, architecture-map (0.14.0) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Chunked, reliable Meshtastic transport with browser-over-mesh UI |
@@ -70,11 +70,11 @@ flowchart TB
 | **SDK & asset runtime** | Typed client, sync, telemetry / command path |
 | **Atlas Link** | Meshtastic Link service/SDK — Shared Picture, Tasks, radio transport |
 | **Plugins** | Authoring runtime, first-party catalog, catalog releases |
-| **Core CLI** | Ink TUI for single-host `atlas-core` lifecycle ops |
+| **Core CLI** | Default Ink action-list TUI for single-host `atlas-core` lifecycle and Plugin updates |
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: aggregate acceptance suite binding evidence across Core, SDK, Link, simulations, command interface, packed CLI, and container platforms — durable fixtures, failure classification, and contract checks for entity/auth, task lifecycle, object bytes, storage and migration recovery, geofeature, map windows, moving-assets trails, simulation browser/SSE, and link join/confirmation; Link now closes cleanly when readiness reporting fails. Continues Asset/Track movement history (30-day position, speed, MSL; map trails and sidebar range), Meshtastic Link as the sole radio stack (Shared Picture, ordered Tasks, payload budgeting, serial framing, compression, paired receipts), command-interface geo authoring and dockable windows, plugin platform v1, `atlas-core` CLI, and Core through v0.1.8.
+Recent focus: shipped the action-list Ink TUI as the default `atlas-core` operator surface — lifecycle ops, embedded logs/diagnostics, Core updates (backup-optional), and reviewed one-at-a-time Plugin updates (version and restart impact, progress, cancellation, recovery); recovery and terminal-output hardening around those flows. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence across Core, SDK, Link, simulations, command interface, packed CLI, and containers still stands.
 
 #### Mesh
 
