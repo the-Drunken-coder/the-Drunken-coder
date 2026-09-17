@@ -10,7 +10,7 @@
 | Project | Notes |
 |:--|:--|
 | [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — review skills, architecture-map (0.13.0) |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review skills, architecture-map (0.14.0) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Chunked, reliable Meshtastic transport with browser-over-mesh UI |
@@ -74,7 +74,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: shipped the action-list Ink TUI as the default `atlas-core` operator surface — lifecycle ops, embedded logs/diagnostics, Core updates (backup-optional), and reviewed one-at-a-time Plugin updates (version and restart impact, progress, cancellation, recovery); recovery and terminal-output hardening around those flows. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence across Core, SDK, Link, simulations, command interface, packed CLI, and containers still stands.
+Recent focus: shipped the action-list Ink TUI as the default `atlas-core` operator surface — lifecycle ops, embedded logs/diagnostics, Core updates (backup-optional), and reviewed one-at-a-time Plugin updates (version and restart impact, progress, cancellation, recovery); recovery and terminal-output hardening around those flows. Follow-on verified-defect pass across Core, SDK, Meshtastic Link, simulations, and command interface — Task cancellation and Geofeature deletion controls, Argon2/MinIO object-restore hardening, Link queue-timer cleanup on settlement, and map-source separated from MapLibre navigation. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence across Core, SDK, Link, simulations, command interface, packed CLI, and containers still stands.
 
 #### Mesh
 
