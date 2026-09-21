@@ -74,7 +74,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: shipped the action-list Ink TUI as the default `atlas-core` operator surface — lifecycle ops, embedded logs/diagnostics, Core updates (backup-optional), and reviewed one-at-a-time Plugin updates (version and restart impact, progress, cancellation, recovery); recovery and terminal-output hardening around those flows. Follow-on verified-defect pass across Core, SDK, Meshtastic Link, simulations, and command interface — Task cancellation and Geofeature deletion controls, Argon2/MinIO object-restore hardening, Link queue-timer cleanup on settlement, and map-source separated from MapLibre navigation. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence across Core, SDK, Link, simulations, command interface, packed CLI, and containers still stands.
+Recent focus: replaced Atlas Core release orchestration — tag reservation, one self-contained publication path, immutable sealed Release assets, and GHCR/npm reconcile without committing generated bundles to `main`. Core CLI hardened further: a shared active-work coordinator for interruption/cancellation and terminal-loss routing across lifecycle and Plugin flows, plus typed Plugin recovery outcomes (verified restoration, incomplete recovery/cleanup, unknown state) rendered the same in direct CLI and TUI. Helper consolidation across Meshtastic binary-io, CLI image validation, Plugin plan comparison, and Core coverage profiles. Prior window: shipped the action-list Ink TUI as the default `atlas-core` operator surface (lifecycle, diagnostics, Core/Plugin updates with recovery); verified-defect pass across Core, SDK, Meshtastic Link, simulations, and command interface — Task cancellation and Geofeature deletion, Argon2/MinIO object-restore hardening, Link queue-timer cleanup on settlement, map-source separated from MapLibre navigation. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence still stands.
 
 #### Mesh
 
@@ -86,4 +86,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 18 Sep 2026</sub>
+<sub>Updated 21 Sep 2026</sub>
