@@ -9,9 +9,9 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
+| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
 | [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review skills, architecture-map (0.14.0) |
-| [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
 | [**Meshtastic-WIFI-bridge**](https://github.com/the-Drunken-coder/Meshtastic-WIFI-bridge) | Chunked, reliable Meshtastic transport with browser-over-mesh UI |
 | [**Atlas-Mesh**](https://github.com/the-Drunken-coder/Atlas-Mesh) | Radio transport & mesh-routing lab under Atlas |
@@ -86,4 +86,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 18 Sep 2026</sub>
+<sub>Updated 25 Oct 2026</sub>
