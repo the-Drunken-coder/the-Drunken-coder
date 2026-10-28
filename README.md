@@ -74,7 +74,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: replaced Atlas Core release orchestration — tag reservation, one self-contained publication path, immutable sealed Release assets, and GHCR/npm reconcile without committing generated bundles to `main`. Core CLI hardened further: a shared active-work coordinator for interruption/cancellation and terminal-loss routing across lifecycle and Plugin flows, plus typed Plugin recovery outcomes (verified restoration, incomplete recovery/cleanup, unknown state) rendered the same in direct CLI and TUI. Helper consolidation across Meshtastic binary-io, CLI image validation, Plugin plan comparison, and Core coverage profiles. Prior window: shipped the action-list Ink TUI as the default `atlas-core` operator surface (lifecycle, diagnostics, Core/Plugin updates with recovery); verified-defect pass across Core, SDK, Meshtastic Link, simulations, and command interface — Task cancellation and Geofeature deletion, Argon2/MinIO object-restore hardening, Link queue-timer cleanup on settlement, map-source separated from MapLibre navigation. Continues independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack through Core v0.2.1; prior aggregate acceptance evidence still stands.
+Recent focus: ArduPilot flight tasking — a macOS Asset Host executing takeoff, go-to, return-to-launch, and land over MAVLink, with Protocol schemas, Core Task validation and ordering, and operator inputs in the command interface. The host waits for accepted starts, fresh telemetry, and Guided authority before dispatch, then reports observed outcomes; hardening covers recovery confirmation and stall detection, pilot takeover, battery readiness, and startup/input validation, exercised end to end against a fake aircraft over MAVLink TCP. Alongside it, a Core/Protocol/SDK simplification consolidated check-in behavior, validation ownership, error-payload sanitization, and CLI boundaries; the test suite dropped duplicate validation matrices while keeping behavioral, migration-checksum, and real-storage recovery coverage; and a TypeScript review pass fixed Compose parsing and SDK hydration bookkeeping and cut redundant map-navigation work within the bundle budget. Prior window: replaced Atlas Core release orchestration (tag reservation, a single publication path, immutable sealed Release assets, GHCR/npm reconcile), and hardened the default Ink `atlas-core` TUI with shared interruption/cancellation handling and typed Plugin recovery outcomes. Independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack continue from Core v0.2.1.
 
 #### Mesh
 
@@ -86,4 +86,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 25 Oct 2026</sub>
+<sub>Updated 28 Oct 2026</sub>
