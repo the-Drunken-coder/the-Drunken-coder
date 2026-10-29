@@ -9,7 +9,7 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
+| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations. Retired and archived; development continues in [atlas-field-systems/atlas-core](https://github.com/atlas-field-systems/atlas-core) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review skills, architecture-map (0.14.0) |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
@@ -61,7 +61,9 @@ flowchart TB
 
 #### Modernization
 
-[`Atlas-Modernization`](https://github.com/the-Drunken-coder/Atlas-Modernization) — one workspace for the rewrite:
+[`Atlas-Modernization`](https://github.com/the-Drunken-coder/Atlas-Modernization) — one workspace for the rewrite, now retired and archived (29 Oct 2026); development continues in [`atlas-field-systems/atlas-core`](https://github.com/atlas-field-systems/atlas-core).
+
+Layout at retirement:
 
 | Layer | Role |
 |:--|:--|
@@ -74,7 +76,7 @@ flowchart TB
 | **Command interface** | Map console on Cloudflare Pages / Vite |
 | **Simulations** | Local scenario workbench + browser UI |
 
-Recent focus: ArduPilot flight tasking — a macOS Asset Host executing takeoff, go-to, return-to-launch, and land over MAVLink, with Protocol schemas, Core Task validation and ordering, and operator inputs in the command interface. The host waits for accepted starts, fresh telemetry, and Guided authority before dispatch, then reports observed outcomes; hardening covers recovery confirmation and stall detection, pilot takeover, battery readiness, and startup/input validation, exercised end to end against a fake aircraft over MAVLink TCP. Alongside it, a Core/Protocol/SDK simplification consolidated check-in behavior, validation ownership, error-payload sanitization, and CLI boundaries; the test suite dropped duplicate validation matrices while keeping behavioral, migration-checksum, and real-storage recovery coverage; and a TypeScript review pass fixed Compose parsing and SDK hydration bookkeeping and cut redundant map-navigation work within the bundle budget. Prior window: replaced Atlas Core release orchestration (tag reservation, a single publication path, immutable sealed Release assets, GHCR/npm reconcile), and hardened the default Ink `atlas-core` TUI with shared interruption/cancellation handling and typed Plugin recovery outcomes. Independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack continue from Core v0.2.1.
+Final focus before retirement: ArduPilot flight tasking — a macOS Asset Host executing takeoff, go-to, return-to-launch, and land over MAVLink, with Protocol schemas, Core Task validation and ordering, and operator inputs in the command interface. The host waits for accepted starts, fresh telemetry, and Guided authority before dispatch, then reports observed outcomes; hardening covers recovery confirmation and stall detection, pilot takeover, battery readiness, and startup/input validation, exercised end to end against a fake aircraft over MAVLink TCP. Alongside it, a Core/Protocol/SDK simplification consolidated check-in behavior, validation ownership, error-payload sanitization, and CLI boundaries; the test suite dropped duplicate validation matrices while keeping behavioral, migration-checksum, and real-storage recovery coverage; and a TypeScript review pass fixed Compose parsing and SDK hydration bookkeeping and cut redundant map-navigation work within the bundle budget. Prior window: replaced Atlas Core release orchestration (tag reservation, a single publication path, immutable sealed Release assets, GHCR/npm reconcile), and hardened the default Ink `atlas-core` TUI with shared interruption/cancellation handling and typed Plugin recovery outcomes. Independent Plugin releases (schema 4), Asset/Track movement history, and Meshtastic Link as the sole radio stack continue from Core v0.2.1.
 
 #### Mesh
 
@@ -86,4 +88,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 28 Oct 2026</sub>
+<sub>Updated 29 Oct 2026</sub>
