@@ -9,7 +9,7 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations |
+| [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations. Retired and archived; development continues in [atlas-field-systems/atlas-core](https://github.com/atlas-field-systems/atlas-core) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review skills, architecture-map (0.14.0) |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |

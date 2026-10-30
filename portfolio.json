@@ -11,7 +11,7 @@
       "id": "atlas-modernization",
       "name": "Atlas-Modernization",
       "group": "atlas-modernization",
-      "summary": "App stack rewrite \u2014 core, protocol, SDK, plugins, command UI, simulations",
+      "summary": "App stack rewrite \u2014 core, protocol, SDK, plugins, command UI, simulations. Retired and archived; development continues in [atlas-field-systems/atlas-core](https://github.com/atlas-field-systems/atlas-core)",
       "url": "https://github.com/the-Drunken-coder/Atlas-Modernization",
       "sources": [
         {
