@@ -88,4 +88,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 2 Nov 2026</sub>
+<sub>Updated 31 Oct 2026</sub>
