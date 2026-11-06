@@ -9,7 +9,7 @@
 <!-- profile:lately:start -->
 | Project | Notes |
 |:--|:--|
-| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — external review and review-triage skills (investigate, detective), architecture-map (0.15.0) |
+| [**DCS**](https://github.com/the-Drunken-coder/DCS) | Small personal Codex skills library — bounded UI hill-climb / design-judge loop, review-triage (investigate, detective), architecture-map (0.16.0) |
 | [**Atlas-Modernization**](https://github.com/the-Drunken-coder/Atlas-Modernization) | App stack rewrite — core, protocol, SDK, plugins, command UI, simulations. Retired and archived; development continues in [atlas-field-systems/atlas-core](https://github.com/atlas-field-systems/atlas-core) |
 | [**easymanet**](https://github.com/the-Drunken-coder/easymanet) | Zero-touch OpenMANET provisioning and imaging |
 | [**sidc-kit**](https://github.com/the-Drunken-coder/sidc-kit) | Compact TypeScript toolkit for Symbol Identification Codes |
@@ -88,4 +88,4 @@ Latest: consolidated radio verification lab.
 
 ---
 
-<sub>Updated 5 Nov 2026</sub>
+<sub>Updated 6 Nov 2026</sub>

@@ -72,7 +72,7 @@
       "id": "dcs",
       "name": "DCS",
       "group": "dcs",
-      "summary": "Small personal Codex skills library \u2014 external review and review-triage skills (investigate, detective), architecture-map (0.15.0)",
+      "summary": "Small personal Codex skills library \u2014 bounded UI hill-climb / design-judge loop, review-triage (investigate, detective), architecture-map (0.16.0)",
       "url": "https://github.com/the-Drunken-coder/DCS",
       "sources": [
         {
